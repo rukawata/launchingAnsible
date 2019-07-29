@@ -8,5 +8,5 @@
   # 10 retries with 10 second in between
   register: result
   until: result is succeeded
-  retries: 10
-  delay: 10 
+  retries: 1
+  delay: 1

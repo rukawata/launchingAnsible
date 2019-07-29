@@ -1,7 +1,11 @@
 ---
 - name: test download
-  hosts: 127.0.0.1
+  hosts: "{{ hdbserver_host }}"
   connection: local
   roles:
     - download-hana
+  tasks:
+    - debug:
+        msg: "I'm on {{ hdbserver_host }}"
+
 
