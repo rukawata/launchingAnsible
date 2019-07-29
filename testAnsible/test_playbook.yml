@@ -1,0 +1,7 @@
+---
+- name: test download
+  hosts: 127.0.0.1
+  connection: local
+  roles:
+    - download-hana
+

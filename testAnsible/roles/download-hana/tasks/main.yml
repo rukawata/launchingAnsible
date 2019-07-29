@@ -1,0 +1,12 @@
+---
+- name: download hdbserver
+  get_url:
+    url: "{{ url_hdbserver }}"
+    dest: /home/nancyc/IMDB_SERVER_LINUX.SAR
+    # timeout default 10 (seconds)
+    timeout: 30 
+  # 10 retries with 10 second in between
+  register: result
+  until: result is succeeded
+  retries: 10
+  delay: 10 
